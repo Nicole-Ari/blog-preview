@@ -86,6 +86,9 @@ body {
   align-items: center;
   gap: 12px;
 }
+.container .footer img {
+  width: 10%;
+}
 .container .footer {
   display: flex;
   justify-content: left;
