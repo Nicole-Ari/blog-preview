@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "figtree-ExtraBold";
+  src: url("assets/fonts/static/Figtree-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "figtree-Medium";
+  src: url("assets/fonts/static/Figtree-Medium.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --contentWidth: clamp(300px, 80%, 384px);
+  --main-color: hsl(47, 88%, 63%);
+  --main-text: hsl(0, 0%, 7%);
+  --second-text: hsl(0, 0%, 50%);
+  --family: "figtree-Medium", sans-serif;
+  --family-bold: "figtree-ExtraBold", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--main-color);
+}
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--main-text);
+  box-shadow: 8px 8px 0 #000;
+  color: var(--main-text);
+  font-family: var(--family);
+  font-size: 16px;
+  width: var(--contentWidth);
+  transition: width 0.3s ease-in-out;
+}
+.container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container .header > img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.container .content .top {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.container .content .top .tag {
+  background: #000;
+  width: fit-content;
+  background-color: var(--main-color);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-family: var(--family-bold);
+}
+.container .content > h1 {
+  font-family: var(--family-bold);
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+}
+.container .content > h1:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.container .content > p {
+  color: var(--second-text);
+  line-height: 22px;
+}
+
+.container .footer img {
+  width: 10%;
+}
+.container .footer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-family: var(--family-bold);
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
